@@ -3976,3 +3976,162 @@ In extr_locale_in_accept_lang: locale = ru
 Completed 200 OK in 195ms (Views: 192.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/?locale=ru" for 127.0.0.1 at 2018-01-05 11:22:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (21.0ms)
+  Rendered layouts/_shim.html.haml (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (15.1ms)
+  Rendered shared/_flash.html.haml (5.7ms)
+  Rendered shared/_footer.html.haml (4.7ms)
+Completed 200 OK in 737ms (Views: 727.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at 2018-01-05 11:22:56 +0300
+Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.5ms)
+  Rendered shared/_flash.html.haml (4.9ms)
+  Rendered shared/_footer.html.haml (4.8ms)
+Completed 200 OK in 291ms (Views: 288.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at 2018-01-05 11:23:02 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LFYtVJ47Q26n97Vi+ubKOAVR1G3Q6SsabkQFzk2wSas7fdexRkpUskfj+MxuShF+tKJes0gMAfvLj1GYMNHAbA==", "session"=>{"email"=>"ivan@ivan.ru", "password"=>"[FILTERED]"}, "commit"=>"Войти", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivan@ivan.ru"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["updated_at", "2018-01-05 08:23:03.085496"], ["id", 6]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/work?locale=ru
+Completed 302 Found in 90ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/work?locale=ru" for 127.0.0.1 at 2018-01-05 11:23:03 +0300
+Processing by WorkController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+  Rendering work/index.html.haml within layouts/application
+  Rendered work/_button_theme_select.html.haml (2.6ms)
+  Rendered work/_button_list_results.html.haml (2.9ms)
+  Rendered work/_images.html.haml (28.0ms)
+  Rendered work/index.html.haml within layouts/application (30.6ms)
+  Rendered layouts/_shim.html.haml (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.5ms)
+  Rendered shared/_flash.html.haml (4.2ms)
+  Rendered shared/_footer.html.haml (4.2ms)
+Completed 200 OK in 222ms (Views: 210.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/choose_theme?locale=ru" for 127.0.0.1 at 2018-01-05 11:23:06 +0300
+Processing by WorkController#choose_theme as JS
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "themes"."name" FROM "themes"[0m
+In WorkController#choose_theme @themes = ["-----", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?", "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?", "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?", "Какое из произведений художника В.Кандинского наилучшим образом характеризует его творчество?", "Какое из произведений художника В.ван Гога наилучшим образом характеризует его творчество?", "Какое из изображений является наиболее гармоничным по вашему восприятию?", "Какой цвет автомобиля является наиболее популярным в этом году?", "Какое блюдо приготовить на Новый Год"]
+  Rendering work/choose_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (3.7ms)
+  Rendered work/_choose_theme_from_arr.html.haml (3.6ms)
+  Rendered work/choose_theme.js.erb (10.9ms)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/display_theme" for 127.0.0.1 at 2018-01-05 11:23:08 +0300
+Processing by WorkController#display_theme as JS
+  Parameters: {"utf8"=>"✓", "theme"=>"Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?"}
+In work#display_theme
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["LIMIT", 1]]
+  [1m[36mTheme Load (0.5ms)[0m  [1m[34mSELECT  "themes".* FROM "themes" WHERE "themes"."name" = $1 LIMIT $2[0m  [["name", "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?"], ["LIMIT", 1]]
+In show_image: current_user_id = 6 
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images"."id", "images"."name", "images"."file", "images"."ave_value" FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 3]]
+In show_image: one_image_attr = {"id"=>11, "name"=>"P. Picasso, Фабрика", "file"=>"Picasso Fabrique.jpg", "ave_value"=>nil} 
+In show_image: image_id = 11 
+  [1m[36mValue Load (0.5ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 11]]
+In show_image: user_valued = 0 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+In show_image:  data = {:index=>0, :values_qty=>2, :current_user_id=>6, :theme_id=>3, :images_arr_size=>12, :image_id=>11, :name=>"P. Picasso, Фабрика", :file=>"Picasso Fabrique.jpg", :user_valued=>0, :value=>0, :common_ave_value=>0} 
+  Rendering work/display_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (2.7ms)
+  Rendered work/display_theme.js.erb (8.8ms)
+Completed 200 OK in 41ms (Views: 15.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/results_list" for 127.0.0.1 at 2018-01-05 11:23:13 +0300
+Processing by WorkController#results_list as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 3]]
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 3], ["LIMIT", 12]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (23.3ms)
+  Rendered layouts/_shim.html.haml (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (10.5ms)
+  Rendered shared/_flash.html.haml (4.3ms)
+  Rendered shared/_footer.html.haml (4.7ms)
+Completed 200 OK in 214ms (Views: 208.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-05 11:23:15 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 3]]
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 3], ["LIMIT", 12]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (20.9ms)
+  Rendered layouts/_shim.html.haml (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.9ms)
+  Rendered shared/_flash.html.haml (4.6ms)
+  Rendered shared/_footer.html.haml (11.3ms)
+Completed 200 OK in 224ms (Views: 219.1ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/signout?locale=ru" for 127.0.0.1 at 2018-01-05 11:23:19 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sTgluLarDYZIm6GS7QfwkVB+LMfEn0T5Kdb09Sx46yGmE99dbtoaWqiP7Dx5qyvX4Y2mGVx6bhiMHaCjURli5g==", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "3d7a9320b58724aec86e80f32b6a73587bbb8381"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "8527dd6c1438b3f6675038b009a28bc0df3b1054"], ["updated_at", "2018-01-05 08:23:19.873175"], ["id", 6]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at 2018-01-05 11:23:19 +0300
+Processing by MainController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (8.9ms)
+  Rendered shared/_flash.html.haml (4.2ms)
+  Rendered shared/_footer.html.haml (4.2ms)
+Completed 200 OK in 189ms (Views: 187.0ms | ActiveRecord: 1.3ms)
+
+
