@@ -3165,3 +3165,638 @@ In extr_locale_in_accept_lang: locale = ru
 Completed 200 OK in 223ms (Views: 219.6ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-04 18:56:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (42.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2dbcecc8f96f2782d80ba36468efa8ba00a4d02e"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (85.3ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2dbcecc8f96f2782d80ba36468efa8ba00a4d02e"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (133.6ms)
+  Rendered shared/_flash.html.haml (13.6ms)
+  Rendered shared/_footer.html.haml (7.3ms)
+Completed 200 OK in 2353ms (Views: 2287.2ms | ActiveRecord: 55.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signin?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:06 +0300
+Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (28.5ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2dbcecc8f96f2782d80ba36468efa8ba00a4d02e"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.1ms)
+  Rendered shared/_flash.html.haml (4.5ms)
+  Rendered shared/_footer.html.haml (4.1ms)
+Completed 200 OK in 241ms (Views: 237.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m6TQv2Xo1qmBFwZ3Q8+guSZJmgMgN34qjvuUEKtIob9rqKD7wWhV4XGHnzsm1XAVnn2UrzRa4hwDai7GmPx2Og==", "session"=>{"email"=>"ivan@ivan.ru", "password"=>"[FILTERED]"}, "commit"=>"Войти", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivan@ivan.ru"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (41.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["updated_at", "2018-01-04 15:56:19.607575"], ["id", 6]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/work?locale=ru
+Completed 302 Found in 260ms (ActiveRecord: 146.7ms)
+
+
+Started GET "/work?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:19 +0300
+Processing by WorkController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (32.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+  Rendering work/index.html.haml within layouts/application
+  Rendered work/_button_theme_select.html.haml (4.1ms)
+  Rendered work/_button_list_results.html.haml (3.1ms)
+  Rendered work/_images.html.haml (34.9ms)
+  Rendered work/index.html.haml within layouts/application (49.0ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.8ms)
+  Rendered shared/_flash.html.haml (4.2ms)
+  Rendered shared/_footer.html.haml (3.9ms)
+Completed 200 OK in 334ms (Views: 243.4ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/choose_theme?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:33 +0300
+Processing by WorkController#choose_theme as JS
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT "themes"."name" FROM "themes"[0m
+In WorkController#choose_theme @themes = ["-----", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?", "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?", "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?", "Какое из произведений художника В.Кандинского наилучшим образом характеризует его творчество?", "Какое из произведений художника В.ван Гога наилучшим образом характеризует его творчество?", "Какое из изображений является наиболее гармоничным по вашему восприятию?", "Какой цвет автомобиля является наиболее популярным в этом году?", "Какое блюдо приготовить на Новый Год"]
+  Rendering work/choose_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (12.7ms)
+  Rendered work/_choose_theme_from_arr.html.haml (9.6ms)
+  Rendered work/choose_theme.js.erb (33.8ms)
+Completed 200 OK in 128ms (Views: 49.8ms | ActiveRecord: 12.4ms)
+
+
+Started POST "/display_theme" for 127.0.0.1 at 2018-01-04 18:56:35 +0300
+Processing by WorkController#display_theme as JS
+  Parameters: {"utf8"=>"✓", "theme"=>"Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"}
+In work#display_theme
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["LIMIT", 1]]
+  [1m[36mTheme Load (0.7ms)[0m  [1m[34mSELECT  "themes".* FROM "themes" WHERE "themes"."name" = $1 LIMIT $2[0m  [["name", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"], ["LIMIT", 1]]
+In show_image: current_user_id = 6 
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT "images"."id", "images"."name", "images"."file", "images"."ave_value" FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+In show_image: one_image_attr = {"id"=>2, "name"=>"P.-A. Renoir, Букет", "file"=>"Renoir букет.jpg", "ave_value"=>nil} 
+In show_image: image_id = 2 
+  [1m[36mValue Load (0.5ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 2]]
+In show_image: user_valued = 0 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+In show_image:  data = {:index=>0, :values_qty=>1, :current_user_id=>6, :theme_id=>2, :images_arr_size=>10, :image_id=>2, :name=>"P.-A. Renoir, Букет", :file=>"Renoir букет.jpg", :user_valued=>0, :value=>0, :common_ave_value=>0} 
+  Rendering work/display_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (2.6ms)
+  Rendered work/display_theme.js.erb (9.0ms)
+Completed 200 OK in 54ms (Views: 19.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/results_list" for 127.0.0.1 at 2018-01-04 18:56:37 +0300
+Processing by WorkController#results_list as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+  [1m[36mImage Load (0.6ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 2], ["LIMIT", 10]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (53.1ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (9.6ms)
+  Rendered shared/_flash.html.haml (3.9ms)
+  Rendered shared/_footer.html.haml (4.1ms)
+Completed 200 OK in 258ms (Views: 251.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-04 18:56:41 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 2], ["LIMIT", 10]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (26.2ms)
+  Rendered layouts/_shim.html.haml (1.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (10.7ms)
+  Rendered shared/_flash.html.haml (4.2ms)
+  Rendered shared/_footer.html.haml (4.2ms)
+Completed 200 OK in 230ms (Views: 221.0ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/signout?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:48 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jZiHEC1wIiBKfojTimNh3QolljfYpbT8ARxlb3bb2U99lPdUifChaLruEZ/vebFxshGYm8zIKMqMjd+5RW8Oyg==", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "2394e0b76a2da0794f80c2edff85e5c305c86f23"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "0b40e8da5b2ded4a8a5abe370d5ecc6fdf4a4455"], ["updated_at", "2018-01-04 15:56:48.061327"], ["id", 6]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 9ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at 2018-01-04 18:56:48 +0300
+Processing by MainController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.haml (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (8.3ms)
+  Rendered shared/_flash.html.haml (3.9ms)
+  Rendered shared/_footer.html.haml (4.1ms)
+Completed 200 OK in 204ms (Views: 201.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-05 10:17:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (5.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (144.1ms)
+  Rendered layouts/_shim.html.haml (6.5ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (84.2ms)
+  Rendered shared/_flash.html.haml (20.4ms)
+  Rendered shared/_footer.html.haml (23.6ms)
+Completed 200 OK in 8853ms (Views: 8744.3ms | ActiveRecord: 28.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:09 +0300
+Processing by MainController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (20.3ms)
+  Rendered layouts/_shim.html.haml (7.7ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (55.5ms)
+  Rendered shared/_flash.html.haml (20.9ms)
+  Rendered shared/_footer.html.haml (30.0ms)
+Completed 200 OK in 914ms (Views: 906.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/help?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:13 +0300
+Processing by MainController#help as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendering main/help.html.haml within layouts/application
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/help.html.haml within layouts/application (21.5ms)
+  Rendered layouts/_shim.html.haml (7.3ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (50.2ms)
+  Rendered shared/_flash.html.haml (18.7ms)
+  Rendered shared/_footer.html.haml (24.4ms)
+Completed 200 OK in 949ms (Views: 930.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contacts?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:17 +0300
+Processing by MainController#contacts as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendering main/contacts.html.haml within layouts/application
+  Rendered main/contacts.html.haml within layouts/application (21.6ms)
+  Rendered layouts/_shim.html.haml (7.2ms)
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (42.6ms)
+  Rendered shared/_flash.html.haml (19.4ms)
+  Rendered shared/_footer.html.haml (20.4ms)
+Completed 200 OK in 906ms (Views: 894.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:20 +0300
+Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering sessions/new.html.haml within layouts/application
+  Rendered sessions/new.html.haml within layouts/application (53.0ms)
+  Rendered layouts/_shim.html.haml (8.2ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (52.6ms)
+  Rendered shared/_flash.html.haml (17.3ms)
+  Rendered shared/_footer.html.haml (20.2ms)
+Completed 200 OK in 900ms (Views: 890.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0xP9/bHuMs97opmmjO72dm29967zaeZJoZD/NoGtVtHEOAcYaZ8lE5u21AgYQi0w3E59cGuMzKgEW6tg/MzfFg==", "session"=>{"email"=>"ivan@ivan.ru", "password"=>"[FILTERED]"}, "commit"=>"Войти", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivan@ivan.ru"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.5ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["updated_at", "2018-01-05 07:18:32.199478"], ["id", 6]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/work?locale=ru
+Completed 302 Found in 447ms (ActiveRecord: 78.4ms)
+
+
+Started GET "/work?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:32 +0300
+Processing by WorkController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+  Rendering work/index.html.haml within layouts/application
+  Rendered work/_button_theme_select.html.haml (11.3ms)
+  Rendered work/_button_list_results.html.haml (12.1ms)
+  Rendered work/_images.html.haml (126.8ms)
+  Rendered work/index.html.haml within layouts/application (138.2ms)
+  Rendered layouts/_shim.html.haml (6.8ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (46.2ms)
+  Rendered shared/_flash.html.haml (18.3ms)
+  Rendered shared/_footer.html.haml (19.8ms)
+Completed 200 OK in 1046ms (Views: 964.6ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/choose_theme?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:35 +0300
+Processing by WorkController#choose_theme as JS
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "themes"."name" FROM "themes"[0m
+In WorkController#choose_theme @themes = ["-----", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?", "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?", "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?", "Какое из произведений художника В.Кандинского наилучшим образом характеризует его творчество?", "Какое из произведений художника В.ван Гога наилучшим образом характеризует его творчество?", "Какое из изображений является наиболее гармоничным по вашему восприятию?", "Какой цвет автомобиля является наиболее популярным в этом году?", "Какое блюдо приготовить на Новый Год"]
+  Rendering work/choose_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (10.4ms)
+  Rendered work/_choose_theme_from_arr.html.haml (15.1ms)
+  Rendered work/choose_theme.js.erb (39.2ms)
+Completed 200 OK in 88ms (Views: 52.0ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/display_theme" for 127.0.0.1 at 2018-01-05 10:18:39 +0300
+Processing by WorkController#display_theme as JS
+  Parameters: {"utf8"=>"✓", "theme"=>"Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"}
+In work#display_theme
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  [1m[36mTheme Load (2.3ms)[0m  [1m[34mSELECT  "themes".* FROM "themes" WHERE "themes"."name" = $1 LIMIT $2[0m  [["name", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"], ["LIMIT", 1]]
+In show_image: current_user_id = 6 
+  [1m[36mImage Load (6.5ms)[0m  [1m[34mSELECT "images"."id", "images"."name", "images"."file", "images"."ave_value" FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+In show_image: one_image_attr = {"id"=>2, "name"=>"P.-A. Renoir, Букет", "file"=>"Renoir букет.jpg", "ave_value"=>nil} 
+In show_image: image_id = 2 
+  [1m[36mValue Load (1.3ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 2]]
+In show_image: user_valued = 0 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+In show_image:  data = {:index=>0, :values_qty=>1, :current_user_id=>6, :theme_id=>2, :images_arr_size=>10, :image_id=>2, :name=>"P.-A. Renoir, Букет", :file=>"Renoir букет.jpg", :user_valued=>0, :value=>0, :common_ave_value=>0} 
+  Rendering work/display_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (9.8ms)
+  Rendered work/display_theme.js.erb (34.4ms)
+Completed 200 OK in 185ms (Views: 60.0ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/results_list" for 127.0.0.1 at 2018-01-05 10:18:41 +0300
+Processing by WorkController#results_list as HTML
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 2], ["LIMIT", 10]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (91.6ms)
+  Rendered layouts/_shim.html.haml (7.0ms)
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (55.2ms)
+  Rendered shared/_flash.html.haml (26.2ms)
+  Rendered shared/_footer.html.haml (20.1ms)
+Completed 200 OK in 972ms (Views: 938.8ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-05 10:18:45 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 2], ["LIMIT", 10]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (105.4ms)
+  Rendered layouts/_shim.html.haml (8.0ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (54.3ms)
+  Rendered shared/_flash.html.haml (24.8ms)
+  Rendered shared/_footer.html.haml (21.9ms)
+Completed 200 OK in 941ms (Views: 925.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/results_list?locale=ru" for 127.0.0.1 at 2018-01-05 10:18:50 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 2]]
+  [1m[36mImage Load (2.4ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 2], ["LIMIT", 10]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (73.0ms)
+  Rendered layouts/_shim.html.haml (6.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (39.4ms)
+  Rendered shared/_flash.html.haml (17.1ms)
+  Rendered shared/_footer.html.haml (18.3ms)
+Completed 200 OK in 906ms (Views: 885.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/work?locale=ru" for 127.0.0.1 at 2018-01-05 10:19:01 +0300
+Processing by WorkController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "images"[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+  Rendering work/index.html.haml within layouts/application
+  Rendered work/_button_theme_select.html.haml (24.5ms)
+  Rendered work/_button_list_results.html.haml (12.4ms)
+  Rendered work/_images.html.haml (127.0ms)
+  Rendered work/index.html.haml within layouts/application (140.4ms)
+  Rendered layouts/_shim.html.haml (8.1ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (51.8ms)
+  Rendered shared/_flash.html.haml (30.8ms)
+  Rendered shared/_footer.html.haml (64.0ms)
+Completed 200 OK in 1181ms (Views: 1162.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/choose_theme?locale=ru" for 127.0.0.1 at 2018-01-05 10:19:03 +0300
+Processing by WorkController#choose_theme as JS
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "themes"."name" FROM "themes"[0m
+In WorkController#choose_theme @themes = ["-----", "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?", "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?", "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?", "Какое из произведений художника В.Кандинского наилучшим образом характеризует его творчество?", "Какое из произведений художника В.ван Гога наилучшим образом характеризует его творчество?", "Какое из изображений является наиболее гармоничным по вашему восприятию?", "Какой цвет автомобиля является наиболее популярным в этом году?", "Какое блюдо приготовить на Новый Год"]
+  Rendering work/choose_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (18.8ms)
+  Rendered work/_choose_theme_from_arr.html.haml (17.3ms)
+  Rendered work/choose_theme.js.erb (53.4ms)
+Completed 200 OK in 89ms (Views: 72.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/display_theme" for 127.0.0.1 at 2018-01-05 10:19:05 +0300
+Processing by WorkController#display_theme as JS
+  Parameters: {"utf8"=>"✓", "theme"=>"Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?"}
+In work#display_theme
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  [1m[36mTheme Load (1.6ms)[0m  [1m[34mSELECT  "themes".* FROM "themes" WHERE "themes"."name" = $1 LIMIT $2[0m  [["name", "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?"], ["LIMIT", 1]]
+In show_image: current_user_id = 6 
+  [1m[36mImage Load (3.6ms)[0m  [1m[34mSELECT "images"."id", "images"."name", "images"."file", "images"."ave_value" FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+In show_image: one_image_attr = {"id"=>12, "name"=>"H. Matiss, Балерина", "file"=>"Matiss Балерина.jpg", "ave_value"=>nil} 
+In show_image: image_id = 12 
+  [1m[36mValue Load (1.9ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 12]]
+In show_image: user_valued = 0 
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+In show_image:  data = {:index=>0, :values_qty=>1, :current_user_id=>6, :theme_id=>4, :images_arr_size=>15, :image_id=>12, :name=>"H. Matiss, Балерина", :file=>"Matiss Балерина.jpg", :user_valued=>0, :value=>0, :common_ave_value=>0} 
+  Rendering work/display_theme.js.erb
+  Rendered work/_button_theme_select.html.haml (18.4ms)
+  Rendered work/display_theme.js.erb (53.8ms)
+Completed 200 OK in 161ms (Views: 92.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/api/next_image?index=0&theme_id=4&length=15" for 127.0.0.1 at 2018-01-05 10:19:08 +0300
+Processing by Api::ApiController#next_image as JSON
+  Parameters: {"index"=>"0", "theme_id"=>"4", "length"=>"15"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+In show_image: current_user_id = 6 
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT "images"."id", "images"."name", "images"."file", "images"."ave_value" FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+In show_image: one_image_attr = {"id"=>13, "name"=>"H. Matiss, Вид моря из Коллеура", "file"=>"Matiss Вид моря из Коллеура.jpg", "ave_value"=>nil} 
+In show_image: image_id = 13 
+  [1m[36mValue Load (1.4ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 13]]
+In show_image: user_valued = 0 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+In show_image:  data = {:index=>1, :values_qty=>1, :current_user_id=>6, :theme_id=>4, :images_arr_size=>15, :image_id=>13, :name=>"H. Matiss, Вид моря из Коллеура", :file=>"Matiss Вид моря из Коллеура.jpg", :user_valued=>0, :value=>0, :common_ave_value=>0} 
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.71ms)
+Completed 200 OK in 85ms (Views: 60.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/save_value?image_id=13&theme_id=4&value=50" for 127.0.0.1 at 2018-01-05 10:20:07 +0300
+Processing by Api::ApiController#save_value as JSON
+  Parameters: {"image_id"=>"13", "theme_id"=>"4", "value"=>"50"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.6ms)[0m  [1m[32mINSERT INTO "values" ("user_id", "image_id", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 6], ["image_id", 13], ["value", 50], ["created_at", "2018-01-05 07:20:07.554851"], ["updated_at", "2018-01-05 07:20:07.554851"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "values"."value" FROM "values" WHERE "values"."image_id" = $1[0m  [["image_id", 13]]
+In calc_average_value: values_arr = [50], values_sum = 50, ave_value = 50
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "images" SET "ave_value" = $1, "updated_at" = $2 WHERE "images"."id" = $3[0m  [["ave_value", 50.0], ["updated_at", "2018-01-05 07:20:07.613184"], ["id", 13]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mValue Load (2.2ms)[0m  [1m[34mSELECT "values".* FROM "values" WHERE "values"."user_id" = $1 AND "values"."image_id" = $2[0m  [["user_id", 6], ["image_id", 13]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "values"[0m
+  [1m[36mImage Load (3.9ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.44ms)
+Completed 200 OK in 179ms (Views: 3.7ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/results_list" for 127.0.0.1 at 2018-01-05 10:20:10 +0300
+Processing by WorkController#results_list as HTML
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  [1m[36mImage Load (4.0ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (153.0ms)
+  Rendered layouts/_shim.html.haml (11.9ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (65.3ms)
+  Rendered shared/_flash.html.haml (51.6ms)
+  Rendered shared/_footer.html.haml (23.4ms)
+Completed 200 OK in 1303ms (Views: 1256.9ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-05 10:20:13 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  [1m[36mImage Load (4.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (126.4ms)
+  Rendered layouts/_shim.html.haml (6.8ms)
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (49.1ms)
+  Rendered shared/_flash.html.haml (18.7ms)
+  Rendered shared/_footer.html.haml (29.7ms)
+Completed 200 OK in 1038ms (Views: 1015.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/results_list?locale=ru&page=3" for 127.0.0.1 at 2018-01-05 10:20:17 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"3"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (78.1ms)
+  Rendered layouts/_shim.html.haml (6.7ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (44.9ms)
+  Rendered shared/_flash.html.haml (24.2ms)
+  Rendered shared/_footer.html.haml (25.6ms)
+Completed 200 OK in 958ms (Views: 937.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-05 10:20:22 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (150.0ms)
+  Rendered layouts/_shim.html.haml (6.8ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (40.5ms)
+  Rendered shared/_flash.html.haml (17.9ms)
+  Rendered shared/_footer.html.haml (18.7ms)
+Completed 200 OK in 1038ms (Views: 1018.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/results_list?locale=ru" for 127.0.0.1 at 2018-01-05 10:20:24 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  Rendered work/results_list.html.haml within layouts/application (108.8ms)
+Started GET "/results_list?locale=ru&page=2" for 127.0.0.1 at 2018-01-05 10:20:25 +0300
+Processing by WorkController#results_list as HTML
+  Parameters: {"locale"=>"ru", "page"=>"2"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "images" WHERE "images"."theme_id" = $1[0m  [["theme_id", 4]]
+  Rendered layouts/_shim.html.haml (7.3ms)
+  [1m[36mImage Load (8.7ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."theme_id" = $1 ORDER BY ave_value DESC LIMIT $2[0m  [["theme_id", 4], ["LIMIT", 15]]
+  Rendering work/results_list.html.haml within layouts/application
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (137.0ms)
+  Rendered shared/_flash.html.haml (19.4ms)
+  Rendered shared/_footer.html.haml (20.1ms)
+  Rendered work/results_list.html.haml within layouts/application (167.5ms)
+Completed 200 OK in 1143ms (Views: 1103.5ms | ActiveRecord: 20.8ms)
+
+
+  Rendered layouts/_shim.html.haml (7.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (38.2ms)
+  Rendered shared/_flash.html.haml (18.7ms)
+  Rendered shared/_footer.html.haml (19.0ms)
+Completed 200 OK in 1065ms (Views: 1027.4ms | ActiveRecord: 21.0ms)
+
+
+Started DELETE "/signout?locale=ru" for 127.0.0.1 at 2018-01-05 10:20:29 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dJVRCndklljbSumPgdr/HB2K192Ci4Ks1uSGhKCR+i5jvqvvrxWBhDtepCEVdiRarHldAxpuqE1zL9LS3fBz6Q==", "locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "4b64c36467f87cf8425ed4074a8c4ae50b01e3c3"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_token", "1aa427d21a62a111c7a0c0101f136e552977a604"], ["updated_at", "2018-01-05 07:20:29.596319"], ["id", 6]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 25ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at 2018-01-05 10:20:29 +0300
+Processing by MainController#index as HTML
+  Parameters: {"locale"=>"ru"}
+In extr_locale_in_accept_lang: locale = ru
+
+  Rendering main/index.ru.html.haml within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered main/index.ru.html.haml within layouts/application (17.2ms)
+  Rendered layouts/_shim.html.haml (7.0ms)
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 LIMIT $2[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"], ["LIMIT", 1]]
+  Rendered shared/_header.html.haml (39.1ms)
+  Rendered shared/_flash.html.haml (18.2ms)
+  Rendered shared/_footer.html.haml (22.8ms)
+Completed 200 OK in 918ms (Views: 905.9ms | ActiveRecord: 3.1ms)
+
+
